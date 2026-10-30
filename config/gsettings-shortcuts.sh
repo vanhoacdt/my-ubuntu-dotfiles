@@ -22,5 +22,3 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'FIXED'
 gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.3
 
-# Setup Pano Clipboard Manager shortcut (Super + V)
-gsettings set org.gnome.shell.extensions.pano shortcut-hotkey "['<Super>v']"
