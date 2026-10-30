@@ -16,3 +16,5 @@ chmod +x config/gsettings-shortcuts.sh
 ./config/gsettings-shortcuts.sh
 
 echo "✅ Đã cài đặt xong! Vui lòng đảm bảo bạn đang ở phiên đăng nhập Ubuntu on Xorg (X11)."
+mkdir -p ~/.config/autostart
+cp -r config/autostart/* ~/.config/autostart/
