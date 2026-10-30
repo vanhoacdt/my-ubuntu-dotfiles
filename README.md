@@ -1,10 +1,15 @@
 # My Ubuntu Dotfiles
 
-Tập hợp các script cá nhân hóa và tự động hóa môi trường làm việc trên **Ubuntu (X11/Xorg)**.
+Tập hợp các script cá nhân hóa, tùy chỉnh giao diện và tự động hóa môi trường làm việc trên **Ubuntu (X11/Xorg)**.
 
 ## 🚀 Tính năng chính
 
 - **Super + Tab Workspace Toggle:** Chuyển đổi nhanh qua lại giữa 2 không gian làm việc (workspace) bằng script `toggle-workspace.sh` (sử dụng `xdotool` & `wmctrl`).
+- **Tùy chỉnh Giao diện Dock (Dock Customization):**
+  - Chuyển thanh Dock xuống cạnh dưới màn hình và căn giữa (kiểu macOS).
+  - Tắt tự động kéo dài chiều rộng thanh Dock (`extend-height false`).
+  - Ẩn các biểu tượng phân vùng/ổ đĩa SSD mount gắn ngoài.
+  - Hiển thị biểu tượng Thùng rác (Trash).
 - **Tối giản cấu hình:** Giữ nguyên toàn bộ phím tắt mặc định hệ thống của Ubuntu, chỉ ghi đè duy nhất tổ hợp phím `Super + Tab`.
 
 ## 📦 Yêu cầu hệ thống
@@ -37,7 +42,7 @@ sudo apt install -y xdotool wmctrl
    cp bin/toggle-workspace.sh ~/.local/bin/
    chmod +x ~/.local/bin/toggle-workspace.sh
 
-   # Gán phím tắt Super + Tab
+   # Áp dụng cấu hình giao diện Dock và phím tắt Super + Tab
    ./config/gsettings-shortcuts.sh
    ```
 
@@ -48,7 +53,7 @@ my-ubuntu-dotfiles/
 ├── bin/
 │   └── toggle-workspace.sh     # Script chuyển đổi workspace nhanh
 ├── config/
-│   └── gsettings-shortcuts.sh  # Cấu hình phím tắt gsettings (Super+Tab)
+│   └── gsettings-shortcuts.sh  # Cấu hình phím tắt gsettings & giao diện Dock
 ├── install.sh                  # Script cài đặt tự động
-└── README.md
+└── README.md                   # Tài liệu hướng dẫn
 ```
