@@ -13,12 +13,22 @@ gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.3
 # --- Cấu hình Phím tắt tùy chỉnh Super+Tab ---
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[
+    '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/',
+    '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/'
+]"
+
+# Custom 0: Toggle Workspace (Super + Tab)
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Toggle Workspace'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "$HOME/.local/bin/toggle-workspace.sh"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Super>Tab'
 
-# --- Phím tắt kiểu Windows 11 ---
+# Custom 1: Task Manager (Ctrl + Shift + Escape giống Win 11)
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ name 'Task Manager'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ command 'gnome-system-monitor'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ binding '<Control><Shift>Escape'
+
+# --- Phím tắt phong cách Windows 11 ---
 # Super + E: Mở Files / Home
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
 
